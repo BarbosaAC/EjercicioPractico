@@ -4,6 +4,7 @@ Para ejecutar las pruebas unitarias en este proyecto, puedes usar el siguiente c
 
 ```bash
 mvn clean verify
+```
 
 La ruta del reporte es:
 /target/site/jacoco/index.html
