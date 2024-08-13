@@ -1,22 +1,19 @@
-package com.bside.students.models;
+package com.bside.students.dtos;
 
-import jakarta.persistence.*;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
 
-@Entity
-public class Student {
-
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class StudentDto {
     private Integer id;
 
     @NotNull(message = "The name is mandatory")
     @NotBlank(message = "The name is mandatory")
     private String fullName;
 
+    @Positive(message = "The age cannot be zero o negative")
     private int age;
 
     @NotNull(message = "The email cannot be null.")
@@ -28,10 +25,7 @@ public class Student {
 
     private double grade;
 
-    public Student() {
-    }
-
-    public Student(Integer id, String fullName, int age, String email, String address, double grade) {
+    public StudentDto(Integer id, String fullName, int age, String email, String address, double grade) {
         this.id = id;
         this.fullName = fullName;
         this.age = age;
