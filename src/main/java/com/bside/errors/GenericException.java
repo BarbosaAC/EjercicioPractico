@@ -1,4 +1,4 @@
-package com.bside.Errors;
+package com.bside.errors;
 
 public class GenericException extends RuntimeException {
     public GenericException(String message) {

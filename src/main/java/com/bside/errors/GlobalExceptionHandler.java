@@ -1,4 +1,4 @@
-package com.bside.Errors;
+package com.bside.errors;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -40,6 +40,15 @@ public class Student {
         this.grade = grade;
     }
 
+    public Student(String fullName, int age, String email, String address, double grade) {
+        this.id = id;
+        this.fullName = fullName;
+        this.age = age;
+        this.email = email;
+        this.address = address;
+        this.grade = grade;
+    }
+
     public Integer getId() {
         return id;
     }

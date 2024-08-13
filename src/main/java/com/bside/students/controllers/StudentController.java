@@ -1,7 +1,7 @@
-package com.bside.students.Controllers;
+package com.bside.students.controllers;
 
-import com.bside.Errors.GenericException;
-import com.bside.Errors.ResourceNotFoundException;
+import com.bside.errors.GenericException;
+import com.bside.errors.ResourceNotFoundException;
 import com.bside.students.dtos.StudentDto;
 import com.bside.students.models.Student;
 import com.bside.students.services.StudentService;
@@ -38,11 +38,11 @@ public class StudentController {
     }
 
     @GetMapping("")
-    public ResponseEntity<List<Student>> getAll(){
+    public ResponseEntity<List<StudentDto>> getAll(){
         log.info("Receive request get all students in controller");
 
         try {
-            List<Student> students = studentService.getAll();
+            List<StudentDto> students = studentService.getAll();
             log.info("[END] get all students");
             return new ResponseEntity<>(students, HttpStatus.OK);
         } catch (Exception e) {

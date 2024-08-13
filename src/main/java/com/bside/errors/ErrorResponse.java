@@ -1,4 +1,4 @@
-package com.bside.Errors;
+package com.bside.errors;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,10 +7,10 @@ import lombok.Setter;
 @Setter
 public class ErrorResponse {
     private String message;
-    private String datail;
+    private String detail;
 
     public ErrorResponse(String message, String detail) {
         this.message = message;
-        this.datail = detail;
+        this.detail = detail;
     }
 }

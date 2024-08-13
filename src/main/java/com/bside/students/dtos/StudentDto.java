@@ -25,8 +25,18 @@ public class StudentDto {
 
     private double grade;
 
+    public StudentDto() {}
+
     public StudentDto(Integer id, String fullName, int age, String email, String address, double grade) {
         this.id = id;
+        this.fullName = fullName;
+        this.age = age;
+        this.email = email;
+        this.address = address;
+        this.grade = grade;
+    }
+
+    public StudentDto(String fullName, int age, String email, String address, double grade) {
         this.fullName = fullName;
         this.age = age;
         this.email = email;

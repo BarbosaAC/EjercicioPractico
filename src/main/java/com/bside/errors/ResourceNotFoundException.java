@@ -1,4 +1,4 @@
-package com.bside.Errors;
+package com.bside.errors;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

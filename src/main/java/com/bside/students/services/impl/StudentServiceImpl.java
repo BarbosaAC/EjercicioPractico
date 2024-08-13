@@ -1,6 +1,6 @@
 package com.bside.students.services.impl;
 
-import com.bside.Errors.ResourceNotFoundException;
+import com.bside.errors.ResourceNotFoundException;
 import com.bside.students.dtos.StudentDto;
 import com.bside.students.models.Student;
 import com.bside.students.repositories.StudentRepository;
@@ -40,7 +40,7 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public List<Student> getAll() {
+    public List<StudentDto> getAll() {
         log.info("[START] Init service to get all students");
         try {
             log.info("Try find all students");
@@ -49,7 +49,7 @@ public class StudentServiceImpl implements StudentService {
                     .map((this::modelToDto))
                     .toList();
             log.info("Success get all students");
-            return students;
+            return studentsDto;
         } catch (Exception e) {
             log.error("Error obtaining students");
             log.error(e);
